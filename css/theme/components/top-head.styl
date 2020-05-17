@@ -1,0 +1,49 @@
+.top-head
+    position: relative
+    z-index: 200
+    margin-bottom: 0 !important
+    background: var(--secundary)
+    color: var(--secundary-contrast)
+    font-weight: semibold
+    font-size: .875rem
+
+    @media media-max-lg
+        display: none
+
+    strong
+        color: var(--primary)
+        font-weight: semibold
+
+    i
+        color: var(--primary)
+        font-size: 1rem
+
+    &__container
+        container()
+
+        display: flex
+        justify-content: space-between
+        align-items: center
+        min-height: 2.1875rem
+
+    &__contact
+        flex: '1 0 %s' % 210px
+
+    &__socials
+        display: flex
+        flex: '1 0 %s' % 210px
+        min-width: 0
+
+        strong
+            margin-right: 3px
+
+        ul
+            display: flex
+
+        li
+            margin-left: .625rem
+
+    &__newsletter
+        flex: '0 1 %s' % 35rem
+        margin: '0 %s' % (gap / 2)
+        min-width: 0

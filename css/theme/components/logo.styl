@@ -1,4 +1,17 @@
 .logo
     .header &
+        flex: '1 1 %s' % 190px
+        margin-right: 15px
+        min-width: 0
+
         img, svg
-            height: 48px
+            max-width: 100%
+            height: 86px
+            object-fit: contain
+
+            @media media-max-lg
+                height: 50px
+
+            .scrolling &
+                @media media-min-lg
+                    max-height: 50px

@@ -1,0 +1,30 @@
+.mycart
+    .header &
+        @media media-min-lg
+            margin-left: 35px
+
+    &__header
+        a
+            display: flex
+            align-items: center
+            height: 50px
+            color: var(--text-color)
+            font-weight: light
+            font-size: 12px
+
+            @media media-max-lg
+                justify-content: center
+                width: 50px
+
+        .ico
+            margin-right: 8px
+            width: 16px
+            height: 20px
+            color: var(--primary)
+
+            @media media-max-lg
+                margin-right: 0
+
+        .text
+            @media media-max-lg
+                display: none

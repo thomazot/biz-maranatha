@@ -1,0 +1,78 @@
+@media media-min-lg
+    .categories__all
+        .categories &
+            .box--1
+                background: none
+                box-shadow: none
+
+        .all
+            &-ul
+                &--0
+                    display: block
+                    overflow: visible
+                    padding: 0
+                    max-height: none
+                    width: 250px
+                    background: var(--primary)
+
+                &--1
+                    position: absolute
+                    top: 0
+                    right: 0
+                    bottom: 0
+                    left: 250px
+                    display: flex
+                    visibility: hidden
+                    flex-flow: row wrap
+                    overflow-y: auto
+                    background: var(--primary-contrast)
+                    opacity: 0
+                    transition: all .2s ease
+
+            &-li
+                &--0
+                    padding-bottom: 0
+
+                    &:hover
+                        .all-a--0
+                            background: var(--primary-contrast)
+                            color: var(--primary)
+
+                        .all-ul--1
+                            visibility: visible
+                            opacity: 1
+
+                &--1
+                    flex: '0 1 %s' % 145px
+
+            &-a
+                &--0
+                    display: block
+                    padding: 10px 20px
+                    color: var(--primary-contrast)
+                    text-align: left
+                    font-weight: light
+                    font-size: 16px
+
+                    &:hover
+                        box-shadow: none
+
+                &--1
+                    display: block
+                    padding: 10px
+                    text-align: center
+                    font-size: 14px
+
+                    img, svg
+                        display: inline-block
+                        margin-right: 0
+
+                    span
+                        display: block
+                        margin: 0 auto
+                        padding: 10px 0
+                        max-width: 90%
+                        text-align: center
+
+                    &:hover
+                        box-shadow: none

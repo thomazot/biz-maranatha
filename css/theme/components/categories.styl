@@ -1,5 +1,25 @@
-@media (max-width: 992px)
+.categories
+    svg
+        fill: currentColor
+
+    &__show
+        order: -1
+        padding-left: 16px
+        background: none
+        color: var(--primary)
+
+        &:hover
+            background: none
+            color: var(--primary)
+
+@media media-max-lg
     .categories
+        a
+            justify-content: flex-start
+
+            img, svg
+                display: none
+
         .parent
             position: relative
 
@@ -11,12 +31,13 @@
 
             > a
                 display: flex
-                min-height: 48px
                 justify-content: flex-start
                 align-items: center
+                min-height: 48px
 
             &:after
                 icon('\f054')
+
                 position: absolute
                 top: 0
                 right: 0
@@ -26,9 +47,10 @@
                 align-items: center
                 width: 48px
                 height: 48px
+                background: rgba(255, 255, 255, .1)
+                color: var(--primary-contrast)
                 font-size: 20px
-                background: rgba(255, 255, 255, 0.1)
-                transition: all 0.2s ease
+                transition: all .2s ease
 
             &.on
                 &:after
@@ -40,22 +62,90 @@
         .all-li--0
             padding-bottom: 0
 
-@media (min-width: 993px)
+@media media-min-lg
     .categories
-        margin-bottom: 0 !important
-        background: none
+        position: absolute
+        top: 100%
+        left: 0
         flex: 1
+        margin-bottom: 0 !important
         min-width: 0
+        width: 100%
+        background: url(header_bg) no-repeat bottom center
+        transition: all .2s ease
+
+        .scrolling:not(.scrolling--up) &
+            opacity: 0
+            transform: translateY(-50px)
 
         .a--0
-            color: var(--primary)
-            white-space: nowrap
-            font-size: 14px
-            font-weight: semibold
+            padding: 0
+            height: 50px
+            color: var(--text-color)
             text-transform: uppercase
+            white-space: nowrap
+            font-weight: regular
+            font-size: 13px
+
+        .a--1
+            color: var(--text-color)
+            text-align: center
+            font-weight: light
+            font-size: 16px
+
+            &:hover
+                box-shadow: none
+
+            img, svg
+                margin: 0
+
+            span
+                display: block
+                margin: 0 auto
+                padding: 5px 0
+                max-width: 100px
 
         .li--0
+            position: static
             order: 1
+
+            &:hover
+                .a--0
+                    background: none
+                    box-shadow: inset 0 -2px 0 var(--primary)
+                    color: var(--text-color)
+
+        .li--1
+            flex: '0 1 %s' % 185px
+            min-width: 0
+
+        .ul--0
+            max-width: 'calc(100% - %s)' % gap
+            width: viewport
+
+        .ul--1
+            display: flex
+            flex-flow: row wrap
+
+        .box--1
+            width: 100%
+            border-top: solid 1px var(--primary)
+            border-radius: 0
+            background: rgba(255, 255, 255, .92)
 
         &__all
             order: 2
+
+            .a--0
+                display: flex
+                align-items: center
+                margin-right: 20px
+                color: var(--primary)
+
+                > span
+                    margin-top: -3px
+                    height: 25px
+
+                .ico
+                    width: 25px
+                    height: 25px
