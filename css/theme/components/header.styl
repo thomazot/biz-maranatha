@@ -5,7 +5,7 @@
         margin-bottom: 0 !important
         padding: 0
         height: 90px
-        background: #fff url(header_bg) no-repeat top center
+        background: #fff url(header_bg) top center
         transition: all .2s ease
 
         .scrolling &
@@ -16,4 +16,9 @@
     &-container
         position: sticky
         top: 0
-        background: url(header_bg) no-repeat top center
+        background: url(header_bg) top center
+        box-shadow: none
+
+        .scrolling:not(.scrolling--up) &
+            @media media-min-lg
+                border-bottom: solid 1px var(--primary)

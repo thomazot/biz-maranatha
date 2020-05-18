@@ -1,0 +1,101 @@
+.products
+    margin: 0 auto 50px
+
+    .carrossel
+        .owl-wrapper-outer
+            box-sizing: content-box
+            margin: -2px -1px
+            padding: 2px 1px
+
+        .owl-item
+            position: relative
+            z-index: 10
+
+            &:hover
+                z-index: 20
+
+    &__title
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 30px 0
+        color: var(--text-color)
+        font-weight: regular
+        font-size: 24px
+
+        span
+            display: inline-flex
+            justify-content: flex-start
+            align-items: center
+
+            + span
+                &:before
+                    display: inline-block
+                    margin: 0 15px
+                    width: 10px
+                    height: 10px
+                    border-radius: 50%
+                    background: var(--primary)
+                    content: ''
+
+    &__item
+        .carrossel &
+            padding: 0
+
+    &__case
+        box-shadow: 0 0 0 1px #faefdc
+
+        &:hover
+            @media media-min-lg
+                box-shadow: 0 0 0 1px var(--primary)
+
+        .carrossel &
+            padding: 10px
+
+    &__actions
+        margin: 20px -10px -10px
+
+        @media media-min-lg
+            opacity: 0
+            transition: all .2s ease
+
+            .products__case:hover &
+                opacity: 1
+
+        .button
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 100%
+            border-radius: 0
+            box-shadow: none
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 16px
+
+            .ico
+                margin-top: -2px
+                margin-right: 10px
+                width: 16px
+                height: 20px
+
+    &__main
+        --color-name: #696969
+        --color-price: #666666
+
+        &
+            text-align: center
+
+    &__name
+        display: block
+        margin: 20px 0
+        color: var(--color-name)
+        font-weight: regular
+        font-size: 16px
+
+    &__prices
+        display: inline-flex
+        align-items: center
+
+        .price-box-parcelado + .price-box-avista
+            margin-left: 3px

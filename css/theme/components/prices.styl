@@ -1,0 +1,35 @@
+
+.price-box-parcelado
+    .products__prices &
+        margin: 0
+
+        .preco-parcelado-sem-juros
+            margin: 0
+
+            .upto, .s-juros
+                display: none
+
+            + .preco-parcelado
+                display: none
+
+            &, .num, .de, .value span
+                color: var(--color-price)
+                font-weight: bold
+                font-size: 14px
+
+.price-box-avista
+    .products__prices &
+        display: inline-flex
+        margin: 0
+
+        .price
+            order: -1
+
+        .label
+            margin-left: 3px
+
+        .price, .label
+            span
+                color: var(--color-price)
+                font-weight: bold
+                font-size: 14px

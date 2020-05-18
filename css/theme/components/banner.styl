@@ -4,3 +4,29 @@
 
     @media media-max-lg
         margin-top: -16px
+
+.banner
+    &--nojs
+        .banner
+            &__wrapper
+                display: flex
+                justify-content: space-between
+
+            &__item
+                flex: 1
+                min-width: 0
+                width: auto
+
+                .stores &
+                    img
+                        width: 100%
+                        object-fit: cover
+
+#banner__banner-vitrine-01
+    .banner
+        &__item
+            &.first
+                flex: '0 1 %s' % 748px
+
+            &.last
+                flex: '0 1 %s' % 365px
