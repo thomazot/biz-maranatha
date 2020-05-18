@@ -1,0 +1,30 @@
+<div class="footer__row">
+    <div class="footer__abouts">
+        <div class="footer__logo">
+            {{widget type="interface/widget_logo" template="interface/widgets/logo.phtml" identificador="footerlogo" imagem="wysiwyg/logo/maranatha.png" imagem_mobile="wysiwyg/logo/maranatha.png" alt_imagem="Maranatha" tag_html="div" tag_html_home="h3"}}
+        </div>
+        <div class="footer__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempus rhoncus leo, nec auctor orci. Quisque euismod, ipsum id ullamcorper egestas, nunc urna accumsan lectus...
+            <a href="#">Veja Mais</a>
+        </div>
+        <a href="#" class="footer__institucional">Instituccional</a>
+        <a href="#" class="footer__diferenciais">Nossos diferenciais</a>
+
+        <a href="tel:0800000000" class="footer__phone">0800 000 000</a>
+        <a href="mailto:atendimento@maranatha.com.br" class="footer__email">atendimento@maranatha.com.br</a>
+        <div class="footer__timer">De Segunda à Sexta das 8h às 18h</div>
+    </div>
+    <div class="footer__navs">
+        <h3 class="footer__title">Atendimento</h3>
+        <div class="footer__content">
+            {{block type="menubuilder/output" identifier="footer-atendimento"}}
+        </div>
+    </div>
+    <div class="footer__payments">
+        <h3 class="footer__title">Formas de Pagamento</h3>
+        <div class="footer__content">
+            {{widget type="interface/widget_pagtos" template="interface/widgets/pagtos.phtml" identificador="payments" pagtos="all"}}
+            {{widget type="interface/widget_seals" template="interface/widgets/seals.phtml" identificador="securitys" seals="all"}}
+        </div>
+    </div>
+</div>

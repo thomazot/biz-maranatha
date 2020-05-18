@@ -1,0 +1,64 @@
+.footer-head
+    margin-bottom: 0 !important
+    padding: 0 0 30px
+    border-top: solid 1px rgba(0, 0, 0, .1)
+    background: url(header_bg) center center
+
+    &__container
+        @media media-min-lg
+            display: flex
+            justify-content: space-between
+            margin: 0 auto
+            max-width: 'calc(100% - %s)' % gap
+            width: viewport
+
+    &__title
+        display: flex
+        align-items: center
+        margin: 25px 0
+        color: var(--text-color)
+        font-weight: semibold
+        font-size: 16px
+
+        strong
+            margin-left: 4px
+            color: var(--primary)
+            font-weight: semibold
+
+        i
+            margin-right: 10px
+            color: var(--primary)
+            font-size: 22px
+
+    &__factory
+        flex: '0 1 %s' % 290px
+        min-width: 0
+
+        @media media-max-lg
+            text-align: center
+
+            .footer-head__title
+                justify-content: center
+
+    &__instagram
+        flex: '0 1 %s' % 365px
+        min-width: 0
+
+        @media media-max-lg
+            margin: 0 auto
+            max-width: 100%
+            width: 365px
+
+    &__socials
+        flex: '0 1 %s' % 325px
+        min-width: 0
+
+        @media media-max-lg
+            .newsletter
+                margin: 0 auto
+                max-width: 100%
+                width: 365px
+
+    &__instagram, &__socials
+        .footer-head__title
+            justify-content: center

@@ -1,0 +1,37 @@
+<div class="footer-head">
+    <div class="footer-head__container">
+        <div class="footer-head__factory">
+            <h3 class="footer-head__title">
+                <span>Nossa</span> 
+                <strong>Fábrica</strong>
+            </h3>
+            <div class="footer-head__content">
+                <img src="@img(nossa-fabrica)" />
+            </div>
+        </div>
+
+        <div class="footer-head__instagram">
+            <h3 class="footer-head__title">
+                <i class="fab fa-instagram"></i>
+                <span>Acesse nosso</span>
+                <strong>Instagram</strong>
+            </h3>
+            <div class="footer-head__content">
+                {{widget type="banner/widget_banner" template="banner/banner.phtml" banner="bannerinstagram"}}
+            </div>
+        </div>
+
+        <div class="footer-head__socials">
+            <h3 class="footer-head__title">
+                <span>Siga nos nas</span>
+                <strong>Redes Sociais</strong>
+            </h3>
+            <div class="footer-head__content">
+                {{widget type="interface/widget_social" template="interface/widgets/social.phtml" identificador="socials" redes="1,8,7"}}
+            </div>
+            <div class="footer-read__news">
+                {{widget type="interface/widget_newsletter" template="interface/widgets/newsletter.phtml" identificador="footernews" texto="<span>Assine nossa</span><strong>Newsletter</strong>" label_email="E-mail:" placeholder_email="Digite seu E-mail" texto_botao="Cadastrar"}}
+            </div>
+        </div>
+    </div>
+</div>
