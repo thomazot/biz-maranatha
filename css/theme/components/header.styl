@@ -19,6 +19,13 @@
         background: url(header_bg) top center
         box-shadow: none
 
+        @media media-min-lg
+            margin-bottom: 66px !important
+
         .scrolling:not(.scrolling--up) &
             @media media-min-lg
                 border-bottom: solid 1px var(--primary)
+
+        .up &
+            @media media-max-lg
+                transform: translateY(-115px)

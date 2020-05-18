@@ -39,18 +39,20 @@
                     content: ''
 
     &__item
-        .carrossel &
-            padding: 0
+        position: relative
+        z-index: 10
+        padding: 0
+
+        &:hover
+            z-index: 20
 
     &__case
+        padding: 10px
         box-shadow: 0 0 0 1px #faefdc
 
         &:hover
             @media media-min-lg
                 box-shadow: 0 0 0 1px var(--primary)
-
-        .carrossel &
-            padding: 10px
 
     &__actions
         margin: 20px -10px -10px

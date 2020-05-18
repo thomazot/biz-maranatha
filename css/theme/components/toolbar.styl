@@ -1,0 +1,62 @@
+.toolbar
+    .amount, .limiter, .view-mode
+        display: none
+
+    .amount
+        &, span
+            color: #696969
+            font-weight: semibold
+            font-size: 14px
+
+    .pager li
+        font-weight: regular
+        font-size: 14px
+
+        a
+            color: #696969
+
+        span span
+            min-width: 25px
+            line-height: 25px
+
+    .toolbar-bottom &
+        .amount
+            display: block
+
+    .sort-by
+        position: relative
+
+        label
+            color: var(--text-color)
+            text-transform: lowercase
+            font-weight: light
+            font-size: 14px
+            opacity: 1
+
+            &::first-letter
+                text-transform: uppercase
+
+        select
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            padding: 0 40px 0 15px
+            height: 45px
+            border: solid 1px rgba(0, 0, 0, .1)
+            border-radius: 0
+            box-shadow: none
+            color: var(--text-color)
+            font-weight: light
+            font-size: 14px
+            appearance: none
+
+        &:after
+            position: absolute
+            top: 50%
+            right: 10px
+            z-index: 10
+            color: var(--primary)
+            content: '\f078'
+            font-size: 10px
+            font-family: 'Font Awesome 5 Pro'
+            transform: translateY(-50%)

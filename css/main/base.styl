@@ -777,7 +777,7 @@ form.searchautocomplete
 
 .products__item
     display: flex
-    flex: 1 1 250%
+    flex: '1 1 %s' % 250px
     margin: 0
     padding: 0 .5rem 1rem
     min-width: 250px
@@ -3804,23 +3804,24 @@ body.safari .product-image-thumbs .thumb-link
     max-width: 100%
 
 .prod__img
-    flex: 0 0 400%
+    flex: '0 0 %s' % 400px
     margin-right: 2rem
 
 .prod__shop
     display: flex
-    flex: 1 1 5%
+    flex: 1
     align-items: stretch
     min-width: 1px
 
 .prod__shop .col1
-    flex: 1 1 5%
+    flex: 1
     min-width: 1px
 
 .prod__shop .col2
-    flex: 0 0 16%
+    flex: 1
     order: 2
     margin-left: 2rem
+    min-width: 0
 
 .prod__shop .col1 > *, .prod__shop .col2 > *
     margin-bottom: 1rem

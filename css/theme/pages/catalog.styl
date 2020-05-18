@@ -1,0 +1,50 @@
+.category-thumb, .category-description
+    display: none !important
+
+.catalogsearch-result-index, .catalog-category-view
+    .breadcrumb
+        display: none
+
+    .col-main
+        @media media-min-lg
+            display: grid
+            flex: 1
+            min-width: 0
+            grid-template-areas: 'title tool-top' 'category-list category-list' 'tool-bottom tool-bottom'
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: auto 1fr auto
+
+        > .toolbar
+            justify-content: flex-end
+
+            @media media-min-lg
+                grid-area: tool-top
+
+    .col-left
+        @media media-min-lg
+            flex: '0 1 %s' % 270px
+            min-width: 0
+            max-width: none
+
+    .category-title
+        margin: 0
+
+        h1
+            margin: 0
+            padding: 5px 0
+            font-weight: bold
+            font-size: 24px
+            line-height: 35px
+
+        @media media-min-lg
+            grid-area: title
+
+    .category__products
+        margin: 15px 0
+
+        @media media-min-lg
+            grid-area: category-list
+
+    .toolbar-bottom
+        @media media-min-lg
+            grid-area: tool-bottom

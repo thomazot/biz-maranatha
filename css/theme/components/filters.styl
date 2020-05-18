@@ -1,0 +1,21 @@
+.filters
+    .title
+        @media media-min-lg
+            display: none
+
+    &__name
+        font-weight: bold
+        font-size: 20px
+
+        @media media-min-lg
+            color: var(--primary)
+
+    .a-filter, .a--0, .count, .link
+        font-weight: light
+        font-size: 14px
+
+        @media media-max-lg
+            color: var(--primary-contrast)
+
+        @media media-min-lg
+            color: var(--text-color)

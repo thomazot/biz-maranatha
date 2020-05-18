@@ -1044,19 +1044,9 @@ function is468() {
  */
 function hideHeader(status) {
     if (status) {
-        $j('.header-container').animate(
-            {
-                top: '-' + $j('.header-container').outerHeight() + 'px',
-            },
-            200
-        )
+        $j('body').addClass('up')
     } else {
-        $j('.header-container').animate(
-            {
-                top: '0px',
-            },
-            200
-        )
+        $j('body').removeClass('up')
     }
     return false
 }
