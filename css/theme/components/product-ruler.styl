@@ -1,0 +1,39 @@
+.product-ruler
+    --color-text: #666666
+    --color-border: #f7e7ca
+
+    &
+        padding-top: 30px
+        border-top: solid 1px var(--color-border)
+
+    a
+        display: inline-block
+        padding: 10px
+        color: var(--color-text)
+        text-align: center
+        text-transform: uppercase
+        font-weight: medium
+        font-size: 11px
+
+        .ico
+            display: inline-block
+            margin: 0 auto
+            width: 36px
+            height: 36px
+            color: var(--primary)
+
+        span
+            display: block
+            padding-top: 5px
+
+    &__list
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        margin: -10px
+
+    &__item
+        display: flex
+        flex: 0 0 auto
+        justify-content: center
+        min-width: 130px

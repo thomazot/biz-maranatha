@@ -1,0 +1,107 @@
+.reviews
+
+    &
+        @media media-min-sm
+            padding-top: 20px
+            border-top: solid 1px #f7e7ca
+            
+    .subtitle
+        color: var(--primary)
+        font-weight: medium
+        font-size: 16px
+
+        @media media-max-sm
+            border: 0
+
+    &__title
+        title()
+
+    &__resume, &__ratings, &__add
+        box-shadow: none
+
+    &__resume, &__add
+        flex: 0 0 25%
+
+    &__ratings
+        @media media-max-sm
+            padding: 30px 0
+
+    &__resume
+        .product-rate
+            display: flex
+            flex-flow: column nowrap
+
+            > div
+                order: 1
+
+                &.rating-box
+                    order: 2
+
+            .rating-box:before
+                font-size: 20px
+
+            .amount
+                margin-bottom: 30px
+                color: var(--text-color)
+                font-weight: medium
+                font-size: 16px
+                opacity: 1
+
+            .percent .text
+                color: var(--primary)
+
+    &__add
+        textarea, input[type=text]
+            border: solid 1px rgba(0, 0, 0, .1)
+            border-radius: 0
+            box-shadow: none
+
+        .title
+            color: var(--primary)
+            font-weight: medium
+            font-size: 14px
+
+            span
+                display: block
+                color: var(--text-color)
+                font-weight: light
+                font-size: 12px
+
+        .form-list
+            .wide label
+                color: var(--text-color)
+                font-weight: light
+                font-size: 14px
+
+            .wide:first-child
+                label
+                    color: var(--primary)
+
+        .review-summary
+            justify-content: flex-start
+
+            li
+                margin: 0 2px
+
+            label:before
+                font-size: 20px
+
+            .hover label:before
+                color: var(--primary)
+
+        .buttons-set
+            text-align: center
+
+        .btn
+            margin: 0 auto
+            max-width: 175px
+            border-radius: 0
+            box-shadow: none
+            font-weight: medium
+            font-size: 16px
+
+            &:before
+                content: 'Enviar'
+
+            span
+                display: none

@@ -1337,6 +1337,50 @@ function scrollTop() {
     })
 }
 
+function optionsFormat($) {
+    $('.options--select').wrapAll(
+        '<div class="options__box options__selects"></div>'
+    )
+    $('.options--text').wrapAll(
+        '<div class="options__box options__text"></div>'
+    )
+}
+
+function titlesChange($) {
+    // Joinsales
+    var joinsales = $('.jointsales__title')
+    if (joinsales) {
+        joinsales.html('<span>Compre</span><span>Junto</span>')
+        joinsales.addClass('on')
+    }
+
+    // Review
+    var review = $('.reviews__title')
+    if (review) {
+        review.html('<span>Avaliações</span><span>dos Clientes</span>')
+        review.addClass('on')
+    }
+}
+
+function jointsalesRestructure($) {
+    $(
+        '.jointsales__totals, .jointsales__payments, .jointsales__action'
+    ).wrapAll('<div class="jointsales__actions"></div>')
+
+    addSVG({
+        'z-more': {
+            selector: '.jointsales .more',
+            mode: 'html',
+        },
+    })
+}
+
+function helps($) {
+    $('.helps__tab').click(function () {
+        $(this).toggleClass('on')
+    })
+}
+
 $j(document)
     .ready(function ($) {
         // document.ready
@@ -1349,6 +1393,11 @@ $j(document)
                 $(event.target).toggleClass('on')
             }
         })
+
+        optionsFormat($)
+        titlesChange($)
+        jointsalesRestructure($)
+        helps($)
     })
     .on('resizeStop', function (e) {
         // Safe window.resize

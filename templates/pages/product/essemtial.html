@@ -1,0 +1,69 @@
+<div class="prod__img">
+    @fotos
+    @links
+    @compartilhar
+    @selos
+</div>
+<div class="prod__shop">	
+	<div class="col">	
+		<div class="prod__name">
+			<h1>@nome</h1>
+        </div>
+        
+        <div class="prod__links">
+            <a class="prod__ring" href="#">
+                <svg class="ico z-ring"><use xlink:href="#z-ring" /></svg>
+                <span>Quero comprar individual</span>
+            </a>
+            @if(medidas)
+            <a class="prod__ruler" href="javascript:void(0)" onclick="modal_open('table-ruler')">
+                <svg class="ico z-ruler"><use xlink:href="#z-ruler"/></svg>
+                <span>Veja a tabela de medidas</span>
+            </a>
+            @endif(medidas)
+        </div>
+
+		@if(is_disponivel)
+            <div class="prod__call-to-action">
+                <div class="prod__prices">
+                    @preco
+                    @preco(parcelado)	
+                    @preco(avista)
+                    @brinde
+                    @programa-fidelidade(Compre e Ganhe)
+                </div>
+                <div class="prod__buy">
+                    @bt(comprar)
+                </div>
+            </div>
+		@else(is_disponivel)		
+			<div class="prod__esgotado">
+				<div class="title title--sm">Produto Esgotado</div>
+				@alertas
+			</div>
+        @endif(is_disponivel)
+        
+        <div class="prod__custom">
+            <div class="custom">
+                <div class="custom__header">
+                    <svg class="ico z-custom"><use xlink:href="#z-custom" /></svg>
+                    <span>Atendimento personalizado</span>
+                </div>
+                <div class="custom__main">
+                    <div class="custom__text">Viu algum modelo que não tem em nosso site ou possui algum outro orçamento? <a href="#">clique aqui.</a></div>
+                </div>
+            </div>
+        </div>
+	
+		@variacoes
+        @bt(sobconsulta "Sob Consulta")
+        @temporizador
+        
+	</div>
+</div>
+@if(medidas)
+<div id="table-ruler">
+    {{widget type="interface/widget_scripts" template="interface/widgets/scripts.phtml" script_id="produto-tabela-de-medidas"}}
+</div>
+<script>modal('table-ruler');</script>
+@endif(medidas)

@@ -47,7 +47,9 @@
             z-index: 20
 
     &__case
-        padding: 10px
+        display: flex
+        flex-flow: column nowrap
+        padding: 5px
         box-shadow: 0 0 0 1px #faefdc
 
         &:hover
@@ -55,7 +57,7 @@
                 box-shadow: 0 0 0 1px var(--primary)
 
     &__actions
-        margin: 20px -10px -10px
+        margin: 20px -5px -5px
 
         @media media-min-lg
             opacity: 0
@@ -86,6 +88,8 @@
         --color-price: #666666
 
         &
+            flex: 1
+            min-height: 0
             text-align: center
 
     &__name

@@ -3316,13 +3316,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
     display: flex
     flex-flow: row wrap
     align-items: center
-    margin: 0 -.25rem -.5rem
-
-.sharing-links .list:before
-    margin: 0 .25rem .5rem
-    content: 'Compartilhar'
-    font-size: .8rem
-    opacity: .5
 
 .sharing-links li
     flex: 0 0 2%
@@ -3337,27 +3330,26 @@ body.ie .owl-prev:before, body.ie .owl-next:before
     border-radius: 3px
     background: #3b5998
 
-.sharing-links a:hover
-    opacity: .8
+// .sharing-links a:hover
+// opacity: .8
 
-.sharing-links .tt-share a
-    background: #00aced
+// .sharing-links .tt-share a
+// background: #00aced
 
-.sharing-links .gp-share a
-    background: #dd4b39
+// .sharing-links .gp-share a
+// background: #dd4b39
 
-.sharing-links .wa-share a
-    background: #4dc247
+// .sharing-links .wa-share a
+// background: #4dc247
 
-.sharing-links .pt-share a
-    background: #cb2027
+// .sharing-links .pt-share a
+// background: #cb2027
 
-.sharing-links .tb-share a
-    background: #32506d
+// .sharing-links .tb-share a
+// background: #32506d
 
-.sharing-links .lk-share a
-    background: #007bb5
-
+// .sharing-links .lk-share a
+// background: #007bb5
 .sharing-links .email-to-friend a
     background: color1_bg
 
@@ -3405,25 +3397,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
 
 .add-to-cart-btn.no-qty
     padding: 0 1rem
-
-/* @links */
-.add-to-links li:not(:last-child)
-    margin-bottom: .25rem
-
-.add-to-links a
-    display: block
-    padding: .5rem
-    border-radius: 3px
-    background: #fff
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1)
-    color: rgba(0, 0, 0, .7)
-    text-align: center
-    font-weight: 600
-    font-size: .8rem
-
-.add-to-links a:hover
-    background: color1_bg
-    color: color1_font
 
 /* @fotos */
 .product-image-gallery
@@ -3804,12 +3777,13 @@ body.safari .product-image-thumbs .thumb-link
     max-width: 100%
 
 .prod__img
-    flex: '0 0 %s' % 400px
+    flex: '0 1 %s' % 520px
     margin-right: 2rem
+    min-width: 0
 
 .prod__shop
     display: flex
-    flex: 1
+    flex: '1 1 %s' % 580px
     align-items: stretch
     min-width: 1px
 
@@ -4258,12 +4232,6 @@ tr.bundle:before
     padding-top: 1rem
 
 /* Customizado (Opções Customizadas) */
-.options
-    display: flex
-    flex-flow: row wrap
-    align-items: stretch
-    margin: 0 -.5rem 1rem
-
 .options:before
     display: block
     flex: 1 1 100%
@@ -9754,9 +9722,6 @@ table .change-product-link:hover
     .sharing-links li
         margin: 0
 
-    .sharing-links .list:before
-        display: none
-
     /* .tabs */
     .tabs
         display: block
@@ -9969,33 +9934,6 @@ table .change-product-link:hover
 
     .add-to-links li:not(:last-child)
         margin: 0
-
-    .add-to-links a
-        display: flex
-        align-items: center
-        margin: 0 -1rem
-        padding: 1rem
-        border-bottom: 1px solid rgba(0, 0, 0, .1)
-        border-radius: 0
-        box-shadow: none
-        text-align: left
-        font-weight: 400
-        font-size: 1rem
-        line-height: 1em
-
-    .add-to-links li:first-child a
-        border-top: 1px solid rgba(0, 0, 0, .1)
-
-    .add-to-links a:after
-        margin-left: auto
-
-    .add-to-links .link-wishlist a:after
-        display: inline
-
-        icon('\f004')
-
-    .add-to-links .link-compare a:after
-        content: '\f012'
 
     /* Empacotado */
     .bundle

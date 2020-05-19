@@ -1,0 +1,51 @@
+.custom
+    @media media-min-sm
+        display: flex
+
+    &__header
+        position: relative
+        display: flex
+        flex: '0 0 %s' % 145px
+        align-items: center
+        padding: 5px
+        min-height: 55px
+        background: var(--primary)
+        color: var(--primary-contrast)
+        text-transform: uppercase
+        font-weight: medium
+        font-size: 11px
+
+        &:after
+            @media media-min-sm
+                position: absolute
+                top: 50%
+                left: 100%
+                border-top: solid 10px transparent
+                border-bottom: solid 10px transparent
+                border-left: solid 17px var(--primary)
+                content: ''
+                transform: translateY(-50%)
+
+        .ico
+            flex: '0 0 %s' % 18px
+            margin-right: 5px
+            width: 18px
+            height: 30px
+
+        span
+            line-height: 1.2
+
+    &__main
+        display: flex
+        align-items: center
+        border: solid 1px var(--primary)
+        color: #666666
+        text-transform: uppercase
+        font-weight: medium
+        font-size: 11px
+
+        @media media-min-sm
+            padding: 0 25px
+
+        @media media-max-sm
+            padding: 15px

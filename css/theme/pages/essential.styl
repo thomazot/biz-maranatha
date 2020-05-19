@@ -1,0 +1,142 @@
+.prod
+    &__img
+        @media media-max-lg
+            margin-right: 0
+            margin-bottom: 20px
+
+    &__name
+        h1
+            color: var(--primary)
+            font-weight: medium
+            font-size: 26px
+
+    &__links
+        padding: 15px 0
+
+        @media media-min-lg
+            display: flex
+            flex-flow: row wrap
+            justify-content: space-between
+
+    &__ring, &__ruler
+        display: inline-flex
+        align-items: center
+        padding: 0 10px
+        max-width: 100%
+        height: 35px
+        border: solid 1px #f7e7ca
+        color: var(--text-color)
+        text-transform: uppercase
+        font-weight: regular
+        font-size: 11px
+
+        &:hover
+            border-color: var(--primary)
+
+        .ico
+            margin-right: 10px
+            width: 22px
+            height: 22px
+            color: var(--primary)
+
+        @media (min-width: 1124px)
+            width: 275px
+
+        @media media-max-lg
+            display: flex
+
+            + a
+                margin-top: 10px
+
+    &__prices
+        --color-price: #666666
+
+        .price-box
+            display: inline-block
+            margin: 0
+
+            .old-price
+                display: none
+
+            .special-price, .regular-price
+                .label
+                    display: none
+
+                .price span
+                    color: var(--color-price)
+                    font-weight: medium
+                    font-size: 18px
+
+        .price-box-parcelado
+            display: inline-block
+            margin: 0
+
+            .preco-parcelado-sem-juros
+                .upto, .s-juros
+                    display: none
+
+                &:before
+                    content: ' em '
+
+                &, .num, .de, .value span
+                    color: var(--color-price)
+                    font-weight: medium
+                    font-size: 18px
+
+                + .preco-parcelado
+                    display: none
+
+        .price-box-avista
+            padding: 5px 0
+
+            .label
+                display: none
+
+            .price
+                &, span
+                    color: var(--color-price)
+                    font-weight: medium
+                    font-size: 18px
+
+                &:after
+                    content: ' no boleto'
+
+    &__shop
+        .qty-wrapper
+            display: none !important
+
+        .add-to-cart-btn
+            padding: 0
+            min-width: 170px
+            height: 60px
+            border-radius: 0
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 16px
+
+    &__call-to-action
+        margin-top: 10px
+
+        @media media-min-lg
+            display: flex
+            justify-content: space-between
+
+#product_addtocart_form
+    @media media-max-lg
+        display: block
+
+// Products Images
+.product-image-gallery
+    box-shadow: none
+
+.more-views
+    margin-top: 30px
+
+.product-image-thumbs
+    justify-content: center
+
+    li
+        flex: '0 1 %s' % 70px
+
+.product-essential
+    margin-bottom: 30px

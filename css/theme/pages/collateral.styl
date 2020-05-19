@@ -1,0 +1,24 @@
+// variables
+color-border = #faefdc
+
+.prod__descriptions
+    &-header h3
+        title()
+
+    &-content
+        @media media-min-lg
+            display: flex
+
+            .col1, .col2
+                flex: 0 1 50%
+                padding: 0 20px
+                min-width: 50px
+
+            .col2
+                border-left: solid 1px color-border
+
+        @media media-max-lg
+            .col2
+                margin-top: 20px
+                padding-top: 20px
+                border-top: solid 1px color-border

@@ -1,0 +1,200 @@
+.jointsales
+    $item
+        display: flex
+        align-items: center
+
+        .thumb
+            flex: 0 1 30%
+            margin: 0
+            padding-right: 20px
+            min-width: 0
+
+        .info
+            flex: 1
+            min-width: 0
+
+    $name
+        color: #4d4d4d
+        font-weight: medium
+        font-size: 14px
+
+    $priceBox
+        .old-price
+            display: none
+
+        .regular-price, .special-price
+            .label
+                display: none
+
+            .price span
+                color: #4d4d4d
+                font-weight: bold
+                font-size: 14px
+
+    $prices
+        color: #666666
+        font-weight: bold
+        font-size: 14px
+
+    &
+        @media media-min-sm
+            padding-top: 20px
+            border-top: solid 1px #f7e7ca
+
+    .owl-wrapper-outer
+        border: 0
+
+    .more
+        top: 100%
+        width: 40px
+        height: 40px
+        transform: none
+
+        @media media-min-sm
+            top: 50%
+            left: calc(100% + 10px)
+            margin-top: -20px
+
+        .ico
+            width: 40px
+            height: 40px
+            color: var(--primary)
+
+        &:before
+            display: none
+
+    &__title
+        title()
+
+    &__row
+        padding: 20px 0
+
+        .jointsales &
+            @media media-min-sm
+                align-items: center
+
+    &__currentin
+        padding: 0
+        box-shadow: none
+
+    &__current
+        @media media-min-sm
+            padding-bottom: 0
+
+        @media media-min-lg
+            margin-right: 20px
+
+    &__list
+        margin-top: 40px
+
+        @media media-min-sm
+            align-self: center
+            margin-top: 0
+
+        @media media-min-lg
+            margin-left: 20px
+
+    &__current, &__list
+        @media media-min-sm
+            flex: 0 1 calc(50% - 30px)
+
+        @media media-min-lg
+            flex: 0 1 calc(35% - 30px) !important
+
+    &__item
+        max-width: none
+
+    &__currentin, &__item
+        @extend $item
+
+        .title
+            @extend $name
+
+        .price-box
+            @extend $priceBox
+
+    &__totals, &__payments, &__action
+        align-self: flex-start
+        width: 100%
+
+    &__payments
+        display: flex
+        order: -1
+        flex-flow: column nowrap
+
+        .parcelamento
+            order: -1
+
+        .preco-parcelado-sem-juros
+            .upto, .s-juros
+                display: none
+
+            &, .num, .de, .value
+                @extend $prices
+
+        .avista
+            @extend $prices
+
+            margin-bottom: 0
+
+    &__totals
+        margin-top: 0
+
+        .economize
+            padding: 0
+            background: none
+            font-size: 0
+
+            .price
+                color: var(--button)
+                font-weight: light
+                font-size: 12px
+
+                &:before
+                    content: 'economize: '
+
+    &__actions
+        display: flex
+        flex-flow: column nowrap
+
+        @media media-min-sm
+            flex: '1 1 %s' % 300px
+            min-width: 0
+
+        @media media-max-lg
+            margin-top: 20px
+            padding-top: 20px
+            border-top: solid 1px var(--primary)
+
+        @media media-min-lg
+            flex: 0 1 30%
+            padding-left: 60px
+            max-width: 270px
+            border-left: solid 1px var(--primary)
+
+        &:before
+            order: -2
+            max-width: 95px
+            color: var(--primary)
+            content: 'comprando junto'
+            font-weight: medium
+            font-size: 14px
+
+        .todos-juntos, .comprando-junto, .preco-parcelado-sem-juros + .preco-parcelado
+            display: none
+
+    &__action
+        .btn-jointsales
+            width: 100%
+            height: 50px
+            border: 0
+            border-radius: 0
+            background: var(--button)
+            color: var(--button-contrast)
+            text-transform: uppercase
+            font-weight: semibold
+            font-size: 14px
+
+            &:hover
+                background: var(--button-hover)
+                color: var(--button-contrast-hover)
