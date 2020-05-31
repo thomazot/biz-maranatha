@@ -2,6 +2,33 @@
 color-border = #faefdc
 
 .prod__descriptions
+    .std
+        h2
+            text-transform: uppercase
+            font-weight: regular
+            font-size: 18px
+
+        table
+            border: 0
+            border-top: solid 1px color-border
+
+            &:not(:last-child)
+                border-right: 0
+
+    .std table#product-attribute-specs-table tbody
+        th, td
+            padding: 5px 0
+            width: 50%
+            border: 0
+            border-bottom: solid 1px color-border
+            font-size: 14px
+            line-height: 1.3
+
+            &:first-child, &:last-child
+                border-right: 0
+                border-left: 0
+                font-weight: medium
+
     &-header h3
         title()
 

@@ -2,7 +2,8 @@
     margin-bottom: 50px
 
     &__container
-        display: flex
+        @media media-min-lg
+            display: flex
 
     &__header
         padding: 35px 30px
@@ -32,3 +33,10 @@
 
     &__main
         flex: '0 1 %s' % 775px
+
+        .banner, .banner__wrapper, a, img
+            height: 100%
+
+        .banner__wrapper
+            @media media-max-sm
+                display: block

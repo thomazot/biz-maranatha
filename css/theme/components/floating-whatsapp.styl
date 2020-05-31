@@ -1,0 +1,59 @@
+.floating-whatsapp
+    position: fixed
+    right: 150px
+    bottom: 120px
+    z-index: 2
+
+    a
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        background: var(--whatsapp)
+        color: #fff
+
+        svg
+            width: 30px
+            height: 30px
+            fill: #fff
+
+        &:hover span
+            visibility: visible
+            opacity: 1
+            animation: whats-animate 1s infinite
+
+    span
+        position: absolute
+        top: calc(100% + 10px)
+        left: 0
+        visibility: hidden
+        padding: 10px
+        width: 185px
+        border-radius: 2px
+        background: var(--whatsapp)
+        text-transform: uppercase
+        font-weight: light
+        font-size: 11px
+        opacity: 0
+
+        &:before
+            position: absolute
+            top: -2px
+            left: 18px
+            width: 10px
+            height: 10px
+            background: var(--whatsapp)
+            content: ''
+            transform: rotate(45deg)
+
+@keyframes whats-animate
+    0%
+        transform: translateY(0)
+
+    50%
+        transform: translateY(5px)
+
+    100%
+        transform: translateY(0)

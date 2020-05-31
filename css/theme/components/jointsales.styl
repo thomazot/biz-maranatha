@@ -92,6 +92,7 @@
             margin-top: 0
 
         @media media-min-lg
+            align-self: flex-start
             margin-left: 20px
 
     &__current, &__list
@@ -103,6 +104,9 @@
 
     &__item
         max-width: none
+
+        @media media-min-lg
+            padding-top: 0
 
     &__currentin, &__item
         @extend $item

@@ -1,0 +1,29 @@
+.add-to-links
+    --color-text: #696969
+
+    &
+        padding-top: 10px
+
+    li:not(.link-wishlist)
+        display: none
+
+    .link-wishlist
+        text-align: center
+
+        a
+            color: var(--color-text)
+            font-weight: medium
+            font-size: 13px
+
+            &:before
+                margin-right: 3px
+                color: var(--primary)
+                content: '\f004'
+                font-size: 17px
+                font-family: 'Font Awesome 5 Pro'
+
+            &:after
+                content: 'lista de desejo'
+
+            span
+                display: none

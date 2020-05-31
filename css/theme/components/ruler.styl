@@ -1,0 +1,61 @@
+.ruler
+    color: #959595
+    font-weight: light
+    font-size: 13px
+
+    span
+        display: block
+
+    .ico
+        flex: 0 0 30px
+        margin-right: 10px
+        width: 30px
+        height: 30px
+
+    &__item
+        position: relative
+        display: flex
+        flex: 1
+        justify-content: center
+        align-items: center
+        padding: 25px
+        min-width: 0
+
+        @media (max-width: 1023px)
+            padding: 20px
+
+        + .ruler__item
+            &:before
+                position: absolute
+                top: 50%
+                left: 0
+                margin-top: -5px
+                margin-left: -5px
+                width: 10px
+                height: 10px
+                border-radius: 50%
+                background: var(--primary)
+                content: ''
+
+                @media media-max-lg
+                    display: none
+
+        @media media-max-lg
+            &:nth-child(1), &:nth-child(2)
+                flex: 0 0 50%
+
+        @media media-max-sm
+            &, &:nth-child(1), &:nth-child(2)
+                flex: 1 1 100%
+                min-width: 0
+
+    &__container
+        display: flex
+        justify-content: space-between
+        margin: 0 auto
+        max-width: calc(100% - 30px)
+        width: 1235px
+        border: solid 1px #faefdc
+
+        @media media-max-lg
+            flex-wrap: wrap

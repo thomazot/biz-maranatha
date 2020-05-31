@@ -9,6 +9,10 @@
             flex: '0 1 %s' % 530px
             border-bottom: solid 1px rgba(0, 0, 0, .1)
 
+        @media media-max-sm
+            &.on
+                z-index: 100
+
     &__input[type=search]
         &::placeholder
             color: var(--color)
