@@ -12079,6 +12079,13 @@ body {
   bottom: 7.5rem;
   z-index: 2;
 }
+@media (max-width: 992px) {
+  .floating-whatsapp {
+    right: 0.94rem;
+    bottom: 0.94rem;
+    z-index: 999;
+  }
+}
 .floating-whatsapp a {
   display: flex;
   justify-content: center;
